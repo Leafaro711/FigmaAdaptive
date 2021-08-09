@@ -45,39 +45,39 @@ table {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 500;
-  src: url('../fonts/rubik-v14-latin-500.eot'); /* IE9 Compat Modes */
+  src: url('./fonts/rubik-v14-latin-500.eot'); /* IE9 Compat Modes */
   src: local(''),
-       url('../fonts/rubik-v14-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/rubik-v14-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/rubik-v14-latin-500.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/rubik-v14-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/rubik-v14-latin-500.svg#Rubik') format('svg'); /* Legacy iOS */
+       url('./fonts/rubik-v14-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/rubik-v14-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/rubik-v14-latin-500.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/rubik-v14-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/rubik-v14-latin-500.svg#Rubik') format('svg'); /* Legacy iOS */
 }
 
 @font-face {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/rubik-v14-latin-regular.eot'); /* IE9 Compat Modes */
+  src: url('./fonts/rubik-v14-latin-regular.eot'); /* IE9 Compat Modes */
   src: local(''),
-       url('../fonts/rubik-v14-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/rubik-v14-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/rubik-v14-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/rubik-v14-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/rubik-v14-latin-regular.svg#Rubik') format('svg'); /* Legacy iOS */
+       url('./fonts/rubik-v14-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/rubik-v14-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/rubik-v14-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/rubik-v14-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/rubik-v14-latin-regular.svg#Rubik') format('svg'); /* Legacy iOS */
 }
 
 @font-face {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/rubik-v14-latin-700.eot'); /* IE9 Compat Modes */
+  src: url('./fonts/rubik-v14-latin-700.eot'); /* IE9 Compat Modes */
   src: local(''),
-       url('../fonts/rubik-v14-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/rubik-v14-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/rubik-v14-latin-700.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/rubik-v14-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/rubik-v14-latin-700.svg#Rubik') format('svg'); /* Legacy iOS */
+       url('./fonts/rubik-v14-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/rubik-v14-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/rubik-v14-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/rubik-v14-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/rubik-v14-latin-700.svg#Rubik') format('svg'); /* Legacy iOS */
 }
 
 body{
@@ -105,6 +105,10 @@ body{
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
+}
+
+.burger{
+    display: none;
 }
 
 .header-logo:hover, .header-logo:focus{
@@ -171,6 +175,8 @@ a:hover, a:focus{
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 5%;
+
 }
 
 h1{
@@ -420,7 +426,8 @@ h3{
     width: 60px;
     height: 60px;
     border: none;
-    background: transparent;
+    background: #F53838;
+    border-radius: 50%;
 }
 
 nav{
@@ -429,10 +436,14 @@ nav{
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
+    padding-top: 3%;
 }
 
 .nav-buttons{
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+
 }
 
 .subscribe{
@@ -509,4 +520,124 @@ a:hover{
 
 .rights{
     color: #AFB5C0;
+}
+
+.none{
+    display: none;
+}
+
+@media screen and (max-width:768px){
+
+    .burger{
+        display: block;
+    }
+
+    .header__links, .header__buttons{
+        display: none;
+    }
+    
+    .main-text{
+        display: flex;
+        flex-flow: column wrap;
+        height: auto;
+    }
+
+    .cards{
+      padding: 0;
+    }
+
+    .card{
+        width: 30%;
+    }
+
+    .block-1{
+        height: auto;
+    }
+
+    .get-started{
+        align-self: flex-end;
+        margin-top: 5%;
+    }
+
+    .card-none{
+        display: none;
+    }
+
+    .container-4__inner{
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .subscribe{
+        width: 90%;
+    }
+
+    .li-none{
+        display: none;
+    }
+
+    .footer-text{
+        font-size: 30px;
+    }
+
+    .footer__links{
+        height: 200px;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-evenly;
+    }
+
+}
+
+@media screen and (min-width: 320px) and (max-device-width : 480px) {
+
+    .block-1__img{
+        display: none;
+    }
+
+    .block-3__inner, .block-3{
+        display: flex;
+        flex-flow: column wrap;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .pic-2{
+        width: 100%;
+    }
+
+    .features-list{
+        display: none;
+    }
+
+    .card{
+        width: 100%;
+    }
+
+    .cardNone{
+        display: none;
+    }
+
+    .social__media{
+        display: none;
+    }
+
+    .customer-card{
+        height: auto;
+    }
+
+    nav{
+        display: none;
+    }
+
+.subscribe{
+    flex-direction: column;
+    padding-bottom: 10%;
+}
+    .count{
+        flex-flow: column wrap;
+        height: auto;
+    }
 }
